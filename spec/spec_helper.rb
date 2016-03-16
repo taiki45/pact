@@ -1,3 +1,4 @@
+require 'pry'
 require 'rspec'
 require 'fakefs/spec_helpers'
 require 'rspec'
