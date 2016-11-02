@@ -25,8 +25,9 @@ module Pact
           ERB.new(template_string(template_file)).result(binding)
         end
 
+        # Rendered string will be joined to strings which are produced by string literal.
         def template_string(template_file)
-          File.read( template_contents(template_file) )
+          File.read(template_contents(template_file), internal_encoding: __ENCODING__)
         end
 
         def template_contents(template_file)
